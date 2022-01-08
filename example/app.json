@@ -1,0 +1,22 @@
+{
+  "name": "react-native-inflatter-example",
+  "displayName": "Inflatter Example",
+  "expo": {
+    "name": "react-native-inflatter-example",
+    "slug": "react-native-inflatter-example",
+    "description": "Example app for react-native-inflatter",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

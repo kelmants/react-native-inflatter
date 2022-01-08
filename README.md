@@ -11,11 +11,11 @@ npm install react-native-inflatter
 ## Usage
 
 ```js
-import { multiply } from "react-native-inflatter";
+import RNInflatter from 'react-native-inflatter';
 
 // ...
 
-const result = await multiply(3, 7);
+<RNInflatter horizontal={20} vertical={20} />;
 ```
 
 ## Contributing

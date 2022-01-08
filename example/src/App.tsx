@@ -1,18 +1,21 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-inflatter';
+import RNInflatter from 'react-native-inflatter';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text style={styles.text}>Text</Text>
+      <RNInflatter horizontal={20} vertical={20} />
+      <Text style={styles.text}>Another Text</Text>
+      <RNInflatter horizontal={20} vertical={20} />
+      <View style={styles.row}>
+        <RNInflatter horizontal={20} vertical={20} />
+        <Text style={styles.text}>Text</Text>
+        <Text style={styles.text}>Another Text</Text>
+        <RNInflatter horizontal={20} vertical={20} />
+      </View>
     </View>
   );
 }
@@ -22,10 +25,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'black',
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+  row: {
+    flexDirection: 'row',
+  },
+  text: {
+    color: 'white',
+    textAlign: 'center',
   },
 });
